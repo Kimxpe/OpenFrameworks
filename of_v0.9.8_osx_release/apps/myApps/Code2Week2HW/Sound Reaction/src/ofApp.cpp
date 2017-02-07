@@ -4,7 +4,7 @@
 void ofApp::setup(){
     ofBackground(240);
     background.load("poly-4.jpg");
-    movingIcon.load("triangle3.png");
+    //movingIcon.load("triangle3.png");
     song.load("Robert Chacon feat. Robertha Sepulveda - Redshift.mp3");
     song.play();
     
