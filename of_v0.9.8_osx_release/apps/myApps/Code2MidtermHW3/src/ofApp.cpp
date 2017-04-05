@@ -2,31 +2,17 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofBackground(0);
-    
-    particles.setup();
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofSetColor(170,60);
-    
-    ofNoFill();
-    
-    ofPushMatrix();
-    ofTranslate(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
-    ofRotateX(mouseX/4);
-    ofRotateY(mouseY/4);
-            //ofRotateX(ofGetFrameRate());
-            //ofRotateZ(ofGetFrameRate()/10);
-    ofDrawSphere(120);
-    ofPopMatrix();
-    
-    particles.draw();
+
 }
 
 //--------------------------------------------------------------

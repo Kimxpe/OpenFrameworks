@@ -3,30 +3,33 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(0);
+    ofNoFill();
     
-    particles.setup();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+   
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofSetColor(170,60);
-    
-    ofNoFill();
-    
-    ofPushMatrix();
-    ofTranslate(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
-    ofRotateX(mouseX/4);
-    ofRotateY(mouseY/4);
-            //ofRotateX(ofGetFrameRate());
-            //ofRotateZ(ofGetFrameRate()/10);
-    ofDrawSphere(120);
-    ofPopMatrix();
-    
-    particles.draw();
+    ofBackground (73, 116, 209);
+    for (float i = 0; ofGetWindowHeight() + ylines > i; i += ylines) {
+        ofBeginShape();
+        ofVertex(0, i);
+        
+        for (float j = 0; j < ofGetWindowWidth() + xlines; j += xlines) {
+            x2 = j / 234;
+            y2 = i / 165;
+            y = ofMap(ofNoise (x2, y2, z2), 0, 1, -80, 80) + i;
+            ofCurveVertex(j, y);
+        }
+        
+        ofVertex(ofGetWindowWidth(), i);
+        ofEndShape();
+    }
+    z2 += .01;
 }
 
 //--------------------------------------------------------------

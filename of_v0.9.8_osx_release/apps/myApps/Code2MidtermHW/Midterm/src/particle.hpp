@@ -6,14 +6,23 @@
 //
 //
 
-#ifndef particle_hpp
-#define particle_hpp
+#pragma once
+
+#define AMOUNT 1000
 
 #include "ofMain.h"
 
 class particle {
 public:
-
+    int x[AMOUNT];
+    int y[AMOUNT];
+    int z[AMOUNT];
+    
+    int counter;
+    
+    void setup();
+    void draw();
+    
+    
 };
 
-#endif /* particle_hpp */

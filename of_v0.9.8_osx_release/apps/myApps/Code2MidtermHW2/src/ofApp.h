@@ -1,8 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "particle.hpp"
-
 
 class ofApp : public ofBaseApp{
 
@@ -23,5 +21,13 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    particle particles;
+    
+    float xlines = 3;
+    float ylines = 8;
+    float y = 0;
+    
+    float x2 = ofRandom(200);
+    float y2 = ofRandom(100);
+    float z2 = ofRandom(2000);
+		
 };
